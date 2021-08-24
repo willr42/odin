@@ -4,6 +4,7 @@ const resizeButton = document.getElementById("resize")
 let containerField = document.getElementById("containerSize")
 let root = document.documentElement;
 let containerSize = 0;
+
 function createGrid(size) {
 	for (let i = 0; i < size * size; i++) {
 		const gridSquare = document.createElement('div')
@@ -28,19 +29,20 @@ function changeColour(event) {
 }
 
 function resizeGrid(newSize) {
-	console.log(newSize)
+	if (!newSize) {
+	root.style.setProperty('--gridsize',"16");
 	container.replaceChildren();
+	createGrid(16)
+	} else {
 	root.style.setProperty('--gridsize',`${newSize}`);
-	resetGrid()
+	container.replaceChildren();
 	createGrid(newSize)
+	}
 }
 
 createGrid(16)
 
-containerField.addEventListener("keyup", (e) => {
-	containerSize = e.target.value
-	console.log(containerSize)
-});
-
+// Event listeners
+containerField.addEventListener("keyup", (e) => containerSize = e.target.value);
 resetButton.addEventListener("click", (e) => resetGrid())
 resizeButton.addEventListener("click", (e) => resizeGrid(containerSize))
