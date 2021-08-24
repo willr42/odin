@@ -12,6 +12,10 @@
 	border: 3px solid black; 
 }
 
+#resetButton {
+	display:inline;
+}
+
 h1, button {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -25,9 +29,6 @@ max-height:50px;
 max-width: 50px;
 }
 
-#resetButton {
-	display:inline;
-}
 
 @media screen and (max-width: 700px){
 	#container {
