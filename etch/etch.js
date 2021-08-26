@@ -20,12 +20,12 @@ function createGrid(size) {
 function resetGrid() {
 	const gridChildren = container.children
 	for (const element of gridChildren) {
-		element.style.backgroundColor = "white"
+		element.style.backgroundColor = "#ffe8d6"
 	}
 }
 
 function changeColour(event) {
-	event.target.style.backgroundColor = "black"
+	event.target.style.backgroundColor = "#a5a58d"
 }
 
 function resizeGrid(newSize) {
