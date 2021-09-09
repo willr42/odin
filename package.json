@@ -1,0 +1,22 @@
+{
+  "name": "odin",
+  "version": "1.0.0",
+  "description": "Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willr42/odin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willr42/odin/issues"
+  },
+  "homepage": "https://github.com/willr42/odin#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
