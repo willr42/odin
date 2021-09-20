@@ -9,17 +9,18 @@
   </head>
   <body>
     <div id="container"></div>
+    <button id="addBook">Add new book</button>
     <form action="post" id="bookForm">
       <p>
-        <input type="text" name="title" id="bookTitle" />
+        <input type="text" name="title" id="bookTitle" required/>
         <label for="bookTitle">Title</label>
       </p>
       <p>
-        <input type="text" name="author" id="bookAuthor" />
+        <input type="text" name="author" id="bookAuthor" required/>
         <label for="bookAuthor">Author</label>
       </p>
       <p>
-        <input type="text" name="pageCount" id="bookPageCount" />
+        <input type="text" name="pageCount" id="bookPageCount" required/>
         <label for="bookPageCount">Number of Pages</label>
       </p>
       <p>
