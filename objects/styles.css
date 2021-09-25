@@ -1,4 +1,32 @@
+:root {
+	--main-bg-color: #fefae0;
+	--main-text-color: #606c38;
+	--main-highlight-color: #dda15e;
+}
 #bookForm {
 	position: absolute;
 	visibility: hidden;
+}
+
+#library {
+	margin: 0 auto;
+	display:flex;
+	flex-direction: column;
+	width: 95vw;
+	gap: 2vh;
+
+}
+
+.bookCard {
+	border-style: solid;
+	display: flex;
+	flex-direction: column;
+}
+
+.bookCard > h2, .bookCard > p {
+	text-align: center;
+}
+
+.bookCard > button {
+	margin: 0 auto;
 }

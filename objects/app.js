@@ -94,6 +94,7 @@ function displayBook(Book) {
     }
     event.target.parentElement.remove();
   });
+
   // set up read button
   const readButton = document.createElement('button');
   readButton.textContent = 'Change read?';
@@ -108,7 +109,6 @@ function displayBook(Book) {
   });
   bookCard.append(title, author, pageCount, read, deleteButton, readButton);
   libraryDiv.appendChild(bookCard);
-  // write delete function that uses bookid
 }
 
 addBooktoLibrary('The Hobbit', 'J.R.R. Tolkien', 100, true);
