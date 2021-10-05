@@ -14,4 +14,4 @@ class Gameboard {
 
 
 const board = new Gameboard(9);
-console.log(board)
+console.log(board);
