@@ -1,4 +1,5 @@
 class Gameboard {
+
   constructor(boardcells) {
     this.cellArray = [];
     for (let index = 0; index < boardcells; index++) {
