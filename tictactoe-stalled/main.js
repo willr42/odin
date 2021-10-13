@@ -1,5 +1,9 @@
 class Gameboard {
 
+  /**
+   * Gameboard with cellArray representing a Tic-Tac-Toe grid.
+   * @param {int} boardcells : number of cells to be created.
+   */
   constructor(boardcells) {
     this.cellArray = [];
     for (let index = 0; index < boardcells; index++) {
@@ -7,6 +11,10 @@ class Gameboard {
     }
   }
 
+  /**
+   * 
+   * @returns A div filled with board cells.
+   */
   createBoard() {
     const boardDiv = document.createElement('div')
     boardDiv.id = 'gameboard'
