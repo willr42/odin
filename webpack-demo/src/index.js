@@ -1,5 +1,6 @@
 import _ from "lodash";
 
+
 function component() {
   const element = document.createElement("div");
 
@@ -10,3 +11,5 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+// I'm up to https://webpack.js.org/guides/asset-management/#loading-fonts
