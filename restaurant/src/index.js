@@ -1,3 +1,4 @@
-import mainComponent from "./component";
+import drawHome from "./home";
 
-mainComponent()
+drawHome();
+
