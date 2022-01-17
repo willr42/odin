@@ -9,24 +9,31 @@ function createMenuItem(name, description, price, parentElem) {
   itemName.appendChild(itemPrice)
   parentElem.appendChild(itemName)
 }
-// todo: dummy content for createmenuitem
 
-function drawMenu() {
+function drawMenu(entrees, main, dessert){
   const rootDiv = document.getElementById("content");
   const title = document.createElement("h1");
   const entreeHeading = document.createElement("h2")
   const mainHeading = document.createElement("h2")
   const dessertHeading = document.createElement("h2")
-  title.textContent = "Menu";
-  entreeHeading.textContent = "Entrée"
-  mainHeading.textContent = "Main"
-  dessertHeading.textContent = "Dessert"
-  const content = [title, entreeHeading, emailHeading, emailDescription]
+  const content = [title, entreeHeading, mainHeading, dessertHeading] 
   content.forEach(element => {
     rootDiv.appendChild(element)
-  });
+  })
+  title.textContent = "Menu";
+  entreeHeading.textContent = "Entrée"
+  for (const item of entrees) {
+    createMenuItem(item.name, item.description, item.price, entreeHeading)
+  }
+  mainHeading.textContent = "Main"
+  for (const item of main) {
+    createMenuItem(item.name, item.description, item.price, mainHeading)
+  }
+  dessertHeading.textContent = "Dessert"
+  for (const item of dessert) {
+    createMenuItem(item.name, item.description, item.price, dessertHeading)
+  }
 
-  // integrate createMenuItem into this function. I think attaching a node should attach all child nodes so should be able to call it on the heading object.
 }
 
 export default drawMenu;

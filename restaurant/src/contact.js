@@ -1,3 +1,4 @@
+/* eslint-disable no-const-assign */
 
 function drawContact(){
   const rootDiv = document.getElementById("content");

@@ -1,0 +1,48 @@
+{
+  "entrees": [
+    {
+      "name": "Pumpkin Soup",
+      "description": "Delicious, creamy finish with an added tumeric flavouring.",
+      "price": "15"
+    },
+    {
+      "name": "Chicken Rice Paper Rolls",
+      "description": "Crunchy rice paper rolls. Serve of three.",
+      "price": "8"
+    },
+    {
+      "name": "Savoury Cheese and Rice Balls",
+      "description": "Delicious cheesy flavours, including cheddar and brie.",
+      "price": "6"
+    }
+  ],
+  "main": [
+    {
+      "name": "Beef Pie",
+      "description": "Rich pastry and filled with vegetables.",
+      "price": "23"
+    },
+    {
+      "name": "Fish Tacos",
+      "description": "Fresh catch of the day with salsa and guacamole.",
+      "price": "17"
+    },
+    {
+      "name": "Spaghetti Bolognese",
+      "description": "Rich tomato base with bacon pieces.",
+      "price": "25"
+    }
+  ],
+  "dessert": [
+    {
+      "name": "Chocolate Cake",
+      "description": "Moist and rich.",
+      "price": "7"
+    },
+    {
+      "name": "Tiramisu",
+      "description": "Roast coffee beans and delicious cocoa.",
+      "price": "6"
+    }
+  ]
+}
