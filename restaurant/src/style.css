@@ -1,3 +1,14 @@
 h1 {
 	color: red;
 }
+
+button {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	font-size: large;
+	cursor: pointer;
+}
+
+.active{
+	color: red;
+}

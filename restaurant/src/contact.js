@@ -11,7 +11,7 @@ function drawContact(){
   phoneHeading.textContent = "Phone No."
   phoneDescription.textContent = "(03) 9125 6169"
   emailHeading.textContent = "Email"
-  emailDescription = "info@applebeys.com"
+  emailDescription.textContent = "info@applebeys.com"
   const content = [title, phoneHeading, phoneDescription, emailHeading, emailDescription]
   content.forEach(element => {
     rootDiv.appendChild(element)

@@ -1,3 +1,9 @@
+import menuitems from "./menu-items.json"
+
+const entrees = menuitems.entrees;
+const main = menuitems.main;
+const dessert = menuitems.dessert;
+
 function createMenuItem(name, description, price, parentElem) {
   let itemName = document.createElement("h3")
   let itemDescription = document.createElement("p")
@@ -10,7 +16,7 @@ function createMenuItem(name, description, price, parentElem) {
   parentElem.appendChild(itemName)
 }
 
-function drawMenu(entrees, main, dessert){
+function drawMenu(){
   const rootDiv = document.getElementById("content");
   const title = document.createElement("h1");
   const entreeHeading = document.createElement("h2")
