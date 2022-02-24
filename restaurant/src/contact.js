@@ -1,5 +1,3 @@
-/* eslint-disable no-const-assign */
-
 function drawContact(){
   const rootDiv = document.getElementById("content");
   const title = document.createElement("h1");
