@@ -2,6 +2,8 @@ import applebees from '../src/applebees.jpg'
 
 function drawHomepage() {
   const rootDiv = document.getElementById("content");
+  const main = document.createElement("main")
+  main.classList.add("home-main")
   const title = document.createElement("h1");
   const description = document.createElement("p")
   const image = document.createElement("img")
@@ -10,8 +12,9 @@ function drawHomepage() {
   image.src = applebees;
   const content = [title, image, description]
   content.forEach(element => {
-    rootDiv.appendChild(element)
+    main.appendChild(element)
   });
+  rootDiv.appendChild(main)
 }
 
 export default drawHomepage;

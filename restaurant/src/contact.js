@@ -1,5 +1,7 @@
-function drawContact(){
+function drawContact() {
   const rootDiv = document.getElementById("content");
+  const main = document.createElement("main")
+  main.classList.add("contact-main")
   const title = document.createElement("h1");
   const phoneHeading = document.createElement("h2")
   const phoneDescription = document.createElement("p")
@@ -12,8 +14,9 @@ function drawContact(){
   emailDescription.textContent = "info@applebeys.com"
   const content = [title, phoneHeading, phoneDescription, emailHeading, emailDescription]
   content.forEach(element => {
-    rootDiv.appendChild(element)
+    main.appendChild(element)
   });
+  rootDiv.appendChild(main)
 }
 
 export default drawContact;
