@@ -16,6 +16,12 @@ To create a production build:
 npm run build-prod
 ```
 
+To build CSS (quick and dirty, but it works for this project.)
+
+```
+npx sass --no-source-map src/styles.scss dist/styles.css
+```
+
 To create a development build:
 
 ```sh
