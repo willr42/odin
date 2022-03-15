@@ -1,4 +1,5 @@
 node_modules/
 objects/.eslintrc.js
 .eslintrc.js
-dist/
+restaurant/dist/*
+webpack-demo/dist/*
