@@ -15,24 +15,27 @@ todoArea.appendChild(newTodoButton)
 const form = document.getElementById("newTodo")
 
 function validateString(formElement) {
-	console.log("formElement value:", formElement)
 	if (formElement === "") {
-		console.log("No formElement value, returning false.")
 		return false;
 	} else {
-console.log("Returning ture.")
-return true
-}}
+		return true
+	}
+}
 
 form.addEventListener("submit", (e) => {
 	e.preventDefault()
-	const formTitle = form.title.value
-	const formDate = form.duedate.value
-	const formDescription = form.description.value
-	if (!validateString(formTitle)) {
-	console.log("There is no form title.")
-	} else {
-		console.log("There is a form title.")
+	const formTitle = form.title
+	const formDate = form.duedate
+	const formDescription = form.description
+
+	function formValidate(formTitle, formDate, formDescription) {
+		let formErrors = [];
+		// test each value in turn. If error, push to formErrors array. Once finished, if there are no formErrors, break. Otherwise, use form element to attach error message below.
+		if (!validateString(formTitle.value)) {
+			console.log("There is no form title.")
+		} else {
+			console.log("There is a form title.")
+		}
 	}
 	// console.table([{"form": "formTitle", "value": formTitle},{"form": "formDate", "value": formDate},{"form":"formDescription", "value":formDescription}])
 })
