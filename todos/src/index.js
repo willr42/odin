@@ -1,14 +1,7 @@
 import Todo from "./Todo.js"
+import NewTodoButton from "./components/NewTodoButton.js"
 
-const todoArea = document.querySelector("#todo-area")
-const newTodoButton = document.createElement("button")
-newTodoButton.classList.add("newTodoButton")
-newTodoButton.textContent = "+"
-newTodoButton.addEventListener("click", (e) => {
-	console.log("newTodoButton clicked. Event", e)
-})
-todoArea.appendChild(newTodoButton)
-
+NewTodoButton()
 const form = document.getElementById("newTodo")
 
 form.addEventListener("submit", (e) => {
