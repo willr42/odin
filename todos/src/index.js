@@ -1,7 +1,6 @@
-import Todo from "./Todo.js"
-import NewTodoButton from "./components/NewTodoButton.js"
+import Modal from "./components/modal.js"
 
-NewTodoButton()
+Modal()
 const form = document.getElementById("newTodo")
 
 form.addEventListener("submit", (e) => {
