@@ -1,8 +1,12 @@
 import Modal from "./components/modal.js";
+import { addTodoToList } from "./components/lists.js";
 import Todo from "./components/Todo.js";
-const lists = {};
-lists.defaultList = []
 
+const lists = {};
+lists.defaultList = [] // temporary until we implement localStorage & rendering
+
+// TODO Need conditional behaviour. If there isn't any lists from local storage (in a first run scenario) initialise defaultList, set it as active, render to DOM.
+//If there are lists, show those in the sidebar with same render function as normal.
 Modal();
 const form = document.getElementById("newTodo");
 
@@ -14,11 +18,7 @@ form.addEventListener("submit", (e) => {
     form.description.value,
     form.duedate.value
   );
-  defaultList.todos.push(result)
-  console.log("Default List:", defaultList)
-  // remove validation below. Check which list is "open" by looking at classlists of all lists in DOM (also need func to create new lists in DOM.) If there isn't one, it will be default - add to that list and re-render. Otherwise, add to the list that is open.
-  
+  addTodoToList(result, lists)
 });
 
 //TODO: load from & save to localStorage whenever state changes. New List. New Todo. Todo deleted. List deleted.
-//TODO: initialise lists from local storage as options in select dropdown
