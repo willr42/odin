@@ -1,11 +1,7 @@
 import Modal from "./components/modal.js";
 import Todo from "./components/Todo.js";
-const lists = [];
-let defaultList = {
-	listname: "default",
-	todos: []
-};
-lists.push(defaultList)
+const lists = {};
+lists.defaultList = []
 
 Modal();
 const form = document.getElementById("newTodo");

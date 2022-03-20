@@ -1,6 +1,6 @@
 class Todo {
 
-	constructor(title, description, dueDate, list = "default") {
+	constructor(title, description, dueDate) {
 		//TODO handle absence of name and description 
 		const _ = new Date()
 		this.id = _.toISOString()
