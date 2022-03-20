@@ -1,13 +1,14 @@
 import Modal from "./components/modal.js";
-import { addTodoToList } from "./components/lists.js";
+import { addTodoToList, renderLists } from "./components/lists.js";
 import Todo from "./components/Todo.js";
 
 const lists = {};
-lists.defaultList = [] // temporary until we implement localStorage & rendering
 
 // TODO Need conditional behaviour. If there isn't any lists from local storage (in a first run scenario) initialise defaultList, set it as active, render to DOM.
 //If there are lists, show those in the sidebar with same render function as normal.
 Modal();
+renderLists(lists)
+
 const form = document.getElementById("newTodo");
 
 form.addEventListener("submit", (e) => {
