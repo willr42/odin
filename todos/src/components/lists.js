@@ -19,15 +19,13 @@ function renderLists(lists) {
     lists.defaultList = []
   }
 
-  for (const list in lists) {
-    if (Object.hasOwnProperty.call(lists, list)) {
-      const oneList = lists[list];
-      for (const listItem of oneList) {
-        if (!listItem) {
-          console.log("List empty. Finishing early")
-          break
-        }
-        attachTemplate(listItem)
+function renderTodosInList(activeList) {
+  for (const listItem of activeList) {
+    if (!listItem) {
+      console.log("List empty. Finishing early")
+      break
+    }
+    attachTemplate(listItem)
       }
     }
   }
