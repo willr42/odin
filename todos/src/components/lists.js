@@ -16,7 +16,13 @@ function createList(e) {
 // use that current value to create a new list and append to lists array
 }
 
-// need a createList function
+function changeList(e){
+// take in event object. See which list is being clicked on - e.target. 
+// check the currently active list. If it matches the one that's been clicked, don't allow a change.
+// loop through list of lists on DOM. Remove .activeList class from all.
+// Add .activeList class to the one that matches e.target.textContent
+// then run renderList which removes todos from DOM.
+}
 
 // add .activeList class to the list that is being actively displayed. This fires when a list is selected in the sidebar.
 // On first load, this should be set to default.
