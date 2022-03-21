@@ -9,11 +9,11 @@ function addTodoToList(newTodo, lists) {
 
 }
 
-function createList(input){
+function createList(e) {
   const listContainer = document.querySelector(".list-container")
-  const newList = document.createElement("input")
-  newList.type = "text" 
-  listContainer.appendChild(newList) 
+// add new list input to html
+// on submit, read current value of input
+// use that current value to create a new list and append to lists array
 }
 
 // need a createList function
