@@ -2,9 +2,6 @@ import isEmpty from "../utils/objectIsEmpty"
 
 function addTodoToList(newTodo, lists) {
   const activeListName = document.querySelector(".activeList").textContent
-  if (!lists[activeListName]) {
-    lists[activeListName] = []
-  }
   lists[activeListName].push(newTodo)
 
 }
@@ -24,14 +21,9 @@ function changeList(e){
 // then run renderList which removes todos from DOM.
 }
 
-// add .activeList class to the list that is being actively displayed. This fires when a list is selected in the sidebar.
-// On first load, this should be set to default.
-// Only after that can we render the list to the Todo area.
-
-function renderLists(lists) {
-  if (isEmpty(lists)) {
-    lists.defaultList = []
-  }
+function renderLists(selectedList, lists) {
+  // refactor to be purely about DOM manipulation. Take in a list, output its todo contents to DOM.
+}
 
 function renderTodosInList(activeList) {
   for (const listItem of activeList) {
@@ -40,8 +32,6 @@ function renderTodosInList(activeList) {
       break
     }
     attachTemplate(listItem)
-      }
-    }
   }
 }
 
