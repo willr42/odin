@@ -9,6 +9,14 @@ function addTodoToList(newTodo, lists) {
 
 }
 
+function createList(input){
+  const listContainer = document.querySelector(".list-container")
+  const newList = document.createElement("input")
+  newList.type = "text" 
+  listContainer.appendChild(newList) 
+}
+
+// need a createList function
 
 // add .activeList class to the list that is being actively displayed. This fires when a list is selected in the sidebar.
 // On first load, this should be set to default.
