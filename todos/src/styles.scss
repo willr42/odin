@@ -29,3 +29,12 @@ ul {
   padding: 3rem;
   width: 30em
 }
+
+.activeList {
+  color: red;
+  background-color: purple;
+}
+
+.newTodoButton.hidden {
+display:none
+}
