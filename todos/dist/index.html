@@ -13,44 +13,47 @@
     <div id="sidebar">
       <h2 id="sidebar-title">Keepa' organize</h2>
       <div class="list-container"></div>
-      <button id="add-list">New bukkit</button>
+      <div class="addList-container">
+      <input type="text" name="list_name" id="list_name" placeholder="New bukkit"/>
+      <button id="add-list">&#8593</button>
+      </div>
     </div>
     <div id="modal" class="modal">
       <div id="modal-content">
         <h2>New jobbie?</h2>
         <form id="newTodo" action="post">
-        <ul>
-          <li>
-            <label for="todo_title">What do</label>
-            <input
-              type="text"
-              name="title"
-              id="todo_title"
-              placeholder="Kill da' humie"
-            required="required"
-            />
-          </li>
-          <li>
-            <label for="todo_date">When need?</label>
-            <input
-              type="date"
-              name="duedate"
-              id="todo_date"
-              placeholder="28/09/40000"
-            />
-          </li>
-          <li>
-            <label for="todo_description">More about do</label>
-            <textarea
-              name="description"
-              id="todo_description"
-              cols="30"
-              rows="10"
-              placeholder="Go down planet. Get dakka. Shoot dem. Job dun"
-            ></textarea>
-          </li>
-        </ul>
-        <button type="submit">Add it</button>
+          <ul>
+            <li>
+              <label for="todo_title">What do</label>
+              <input
+                type="text"
+                name="title"
+                id="todo_title"
+                placeholder="Kill da' humie"
+                required="required"
+              />
+            </li>
+            <li>
+              <label for="todo_date">When need?</label>
+              <input
+                type="date"
+                name="duedate"
+                id="todo_date"
+                placeholder="28/09/40000"
+              />
+            </li>
+            <li>
+              <label for="todo_description">More about do</label>
+              <textarea
+                name="description"
+                id="todo_description"
+                cols="30"
+                rows="10"
+                placeholder="Go down planet. Get dakka. Shoot dem. Job dun"
+              ></textarea>
+            </li>
+          </ul>
+          <button type="submit">Add it</button>
         </form>
       </div>
     </div>
@@ -64,6 +67,6 @@
         <input type="checkbox" name="taskStatus" id="1" />
       </div>
     </template>
-  <script src="./bundle.js"></script>
+    <script src="./bundle.js"></script>
   </body>
 </html>

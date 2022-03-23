@@ -1,24 +1,40 @@
-import isEmpty from "../utils/objectIsEmpty"
-
 function addTodoToList(newTodo, lists) {
   const activeListName = document.querySelector(".activeList").textContent
   lists[activeListName].push(newTodo)
 
 }
 
-function createList(e) {
-  const listContainer = document.querySelector(".list-container")
-// add new list input to html
-// on submit, read current value of input
-// use that current value to create a new list and append to lists array
+function createList(lists) {
+  const listInput = document.getElementById("list_name")
+  const addListContainer = document.querySelector(".addList-container")
+  const errorElement = document.createElement("p")
+  if (listInput.value === "" & !addListContainer.classList.contains("openError")) {
+    errorElement.textContent = "HEY! No empty bukkits."
+    errorElement.style.color = "red"
+    addListContainer.classList.add("openError")
+    addListContainer.appendChild(errorElement)
+    listInput.focus()
+    return
+  } else if (listInput.value === "" & addListContainer.classList.contains("openError")) {
+    listInput.focus()
+    return
+  } else {
+    if (addListContainer.classList.contains("openError")) {
+      addListContainer.removeChild(errorElement)
+      addListContainer.classList.remove("openError")
+    }
+    lists[listInput.value] = []
+    // need to create new list object in sidebar.
+    console.log(lists)
+  }
 }
 
-function changeList(e){
-// take in event object. See which list is being clicked on - e.target. 
-// check the currently active list. If it matches the one that's been clicked, don't allow a change.
-// loop through list of lists on DOM. Remove .activeList class from all.
-// Add .activeList class to the one that matches e.target.textContent
-// then run renderList which removes todos from DOM.
+function changeList(e) {
+  // take in event object. See which list is being clicked on - e.target. 
+  // check the currently active list. If it matches the one that's been clicked, don't allow a change.
+  // loop through list of lists on DOM. Remove .activeList class from all.
+  // Add .activeList class to the one that matches e.target.textContent
+  // then run renderList which removes todos from DOM.
 }
 
 function renderLists(selectedList, lists) {
@@ -49,4 +65,4 @@ function attachTemplate(listItem) {
 
 }
 
-export { addTodoToList, renderLists }
+export { addTodoToList, createList, renderLists }

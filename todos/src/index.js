@@ -1,5 +1,5 @@
 import Modal from "./components/modal.js";
-import { addTodoToList, renderLists } from "./components/lists.js";
+import { addTodoToList, createList, renderLists } from "./components/lists.js";
 import Todo from "./components/Todo.js";
 
 const lists = {};
@@ -22,4 +22,9 @@ form.addEventListener("submit", (e) => {
   addTodoToList(result, lists)
 });
 
+const submitList = document.getElementById("add-list")
+
+submitList.addEventListener("click", () => {
+  createList(lists)
+})
 //TODO: load from & save to localStorage whenever state changes. New List. New Todo. Todo deleted. List deleted.
