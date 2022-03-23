@@ -1,6 +1,7 @@
 function addTodoToList(newTodo, lists) {
-  const activeListName = document.querySelector(".activeList").textContent
-  lists[activeListName].push(newTodo)
+  const activeList = document.querySelector(".activeList").textContent
+  lists[activeList].push(newTodo)
+  renderList(activeList, lists)
 
 }
 
