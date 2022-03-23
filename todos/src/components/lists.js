@@ -41,16 +41,13 @@ function addNewListToDOM(listName) {
   }
 }
 
-function changeList(e) {
-  // take in event object. See which list is being clicked on - e.target. 
-  // check the currently active list. If it matches the one that's been clicked, don't allow a change.
-  // loop through list of lists on DOM. Remove .activeList class from all.
-  // Add .activeList class to the one that matches e.target.textContent
-  // then run renderList which removes todos from DOM.
-}
-
-function renderLists(selectedList, lists) {
-  // refactor to be purely about DOM manipulation. Take in a list, output its todo contents to DOM.
+function renderList(selectedList, globalLists) {
+  const todoArea = document.querySelector("#todo-area")
+  const newTodoButton = document.querySelector(".newTodoButton")
+  while (todoArea.lastChild !== newTodoButton) {
+    todoArea.removeChild(todoArea.lastChild)    
+  }
+  renderTodosInList(globalLists[selectedList])
 }
 
 function renderTodosInList(activeList) {
