@@ -6,10 +6,11 @@ function addTodoToList(newTodo, lists) {
 }
 
 function createList(lists) {
+  // shift this validation logic into another function so we're not continually creating an error Element we then throw away?
   const listInput = document.getElementById("list_name")
   const addListContainer = document.querySelector(".addList-container")
-  const errorElement = document.createElement("p")
   if (listInput.value === "" & !addListContainer.classList.contains("openError")) {
+    const errorElement = document.createElement("p")
     errorElement.textContent = "HEY! No empty bukkits."
     errorElement.style.color = "red"
     addListContainer.classList.add("openError")
@@ -21,12 +22,22 @@ function createList(lists) {
     return
   } else {
     if (addListContainer.classList.contains("openError")) {
-      addListContainer.removeChild(errorElement)
+      const existingErrorElement = document.querySelector("#newList > p")
+      console.log("removing error element:", existingErrorElement)
+      addListContainer.removeChild(existingErrorElement)
       addListContainer.classList.remove("openError")
     }
     lists[listInput.value] = []
-    // need to create new list object in sidebar.
-    console.log(lists)
+    addNewListToDOM(listInput.value)
+  }
+}
+
+function addNewListToDOM(listName) {
+  const listContainer = document.querySelector(".lists-container")
+  const newListing = document.createElement("li")
+  newListing.textContent = listName
+  listContainer.appendChild(newListing)
+}
   }
 }
 
