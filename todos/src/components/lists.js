@@ -38,6 +38,23 @@ function addNewListToDOM(listName) {
   newListing.textContent = listName
   listContainer.appendChild(newListing)
 }
+
+function changeActiveList(e, globalLists) {
+  const eventTarget = e.target
+  if (eventTarget.classList.contains("activeList")) {
+    return
+  } else {
+    const listsInDOM = document.querySelector(".lists-container").children
+    for (const child of listsInDOM) {
+      if (eventTarget !== child) {
+        child.classList.remove("activeList")
+      } else {
+        child.classList.add("activeList")
+        renderList(e.target.textContent, globalLists)
+      const newTodoButton = document.querySelector(".newTodoButton")
+      newTodoButton.classList.remove("hidden")
+      }
+    }
   }
 }
 
