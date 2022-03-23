@@ -83,12 +83,9 @@ function attachTemplate(listItem) {
   const clone = template.content.cloneNode(true)
   const heading = clone.querySelector(".todo-heading")
   const body = clone.querySelector(".todo-content")
-  console.log("heading is: ", heading, "body is:", body)
   heading.textContent = listItem.title;
   body.textContent = listItem.description;
   todoArea.appendChild(clone)
-  console.log("Clone appended:", clone)
-
 }
 
-export { addTodoToList, createList, renderLists }
+export { addTodoToList, createList, changeActiveList, renderList }
