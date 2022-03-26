@@ -1,4 +1,4 @@
-import isEmpty from "../utils/objectIsEmpty"
+import isEmpty from "../utils/isEmpty"
 
 function addTodoToList(newTodo, lists) {
   const activeListName = document.querySelector(".activeList").textContent
