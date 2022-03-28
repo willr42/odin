@@ -39,6 +39,7 @@ h3 {
 
 ul {
   list-style-type: none;
+  margin: 0;
 }
 
 .newTodoButton.hidden {
@@ -87,6 +88,19 @@ h2 {
   background-color: white;
   padding: 3rem;
   width: 30em;
+}
+
+#newList {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 1rem;
+  align-items: center;
+  input {
+  min-height: 3.5rem;
+  }
+  button {
+    max-height: 2rem;
+  }
 }
 
 .activeList {
