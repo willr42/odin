@@ -13,8 +13,8 @@ $txt-font-body: "Sudbury Book";
 }
 
 @font-face {
-  font-family: "Univers Black";
-  src: url("fonts/Subhead-UniversBlack.ttf");
+  font-family: "Univers Black", serif;
+  src: url("fonts/Subhead-UniversBlack.ttf") font-weight-normal;
 }
 
 @font-face {
@@ -51,16 +51,20 @@ ul {
 
 * {
   font-family: $txt-font-body;
+  box-sizing: border-box;
 }
 
 h1 {
   font-family: $txt-font-primary;
   color: $txt-primary;
   background-color: $design-secondary;
+  text-align: center;
+  margin-top:1rem;
 }
 
 h2 {
   font-family: $txt-font-secondary;
+  text-align: center;
 }
 
 /*#endregion*/
