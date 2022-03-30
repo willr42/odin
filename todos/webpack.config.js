@@ -15,13 +15,19 @@ const config = {
         exclude: /node_modules/
       },
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      }
+          'sass-loader',
+        ],
+        type:'asset/resource',
+        generator:{
+          filename: '[name].css', 
+        }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ]
   }
 };

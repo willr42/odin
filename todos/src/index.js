@@ -1,6 +1,7 @@
 import Modal from "./components/modal.js";
 import { addTodoToList, createList, changeActiveList, renderList } from "./components/lists.js";
 import Todo from "./components/Todo.js";
+import './sass/styles.scss'
 
 const lists = {};
 
