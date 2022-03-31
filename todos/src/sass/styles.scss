@@ -9,17 +9,17 @@ $txt-font-body: "Sudbury Book";
 
 @font-face {
   font-family: "Casablanca Antique";
-  src: url("../assets/fonts/Heading-CasablancaAntique.ttf") format('.ttf');
+  src: url("./assets/fonts/Heading-CasablancaAntique.ttf");
 }
 
 @font-face {
   font-family: "Univers Black", serif;
-  src: url("../assets/fonts/Subhead-UniversBlack.ttf") font-weight-normal;
+  src: url("./assets/fonts/Subhead-UniversBlack.ttf");
 }
 
 @font-face {
   font-family: "Sudbury Book";
-  src: url("../assets/fonts/Body-SudburyBook.ttf") font-weight-normal;
+  src: url("./assets/fonts/Body-SudburyBook.ttf");
 }
 
 $design-primary: white;
