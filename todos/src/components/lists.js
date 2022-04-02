@@ -61,8 +61,8 @@ function changeActiveList(e, globalLists) {
 function renderList(selectedList, globalLists) {
   const todoArea = document.querySelector("#todo-area")
   const newTodoButton = document.querySelector(".newTodoButton")
-  while (todoArea.lastChild !== newTodoButton) {
-    todoArea.removeChild(todoArea.lastChild)    
+  while (todoArea.children[0] !== newTodoButton) {
+    todoArea.removeChild(todoArea.children[0])    
   }
   renderTodosInList(globalLists[selectedList])
 }
@@ -85,7 +85,9 @@ function attachTemplate(listItem) {
   const body = clone.querySelector(".todo-content")
   heading.textContent = listItem.title;
   body.textContent = listItem.description;
-  todoArea.appendChild(clone)
+
+  const todoButton = document.querySelector(".newTodoButton")
+  todoArea.insertBefore(clone, todoButton)
 }
 
 export { addTodoToList, createList, changeActiveList, renderList }
