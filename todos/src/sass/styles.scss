@@ -60,7 +60,7 @@ h1 {
   color: $txt-primary;
   background-color: $design-secondary;
   text-align: center;
-  margin-top:1rem;
+  margin-top: 1rem;
 }
 
 h2 {
@@ -70,6 +70,7 @@ h2 {
 
 /*#endregion*/
 
+/*#region Modal*/
 .modal {
   display: none;
   position: fixed;
@@ -86,9 +87,30 @@ h2 {
   position: relative;
   margin: 20% auto;
   background-color: white;
-  padding: 3rem;
+  padding: 2rem;
   width: 30em;
+  max-width: 90%;
 }
+
+#newTodo > ul > li {
+  ul {
+    li {
+      margin-top: 1.2rem;
+      margin-bottom: 1.2rem;
+      label {
+        display: block;
+        margin-bottom: 1rem;
+      }
+      input,
+      textarea {
+        max-width: 90%;
+        display: block;
+      }
+    }
+  }
+}
+
+/*#endregion*/
 
 #newList {
   display: flex;
@@ -96,7 +118,9 @@ h2 {
   margin: 0.5rem 1rem;
   align-items: center;
   input {
-  min-height: 3.5rem;
+    min-height: 2rem;
+    max-height: 3.5rem;
+    margin-right: 1rem;
   }
   button {
     max-height: 2rem;
@@ -108,17 +132,16 @@ h2 {
   background-color: purple;
 }
 
-#sidebar{
-  display:flex;
+#sidebar {
+  display: flex;
   flex-direction: column;
- align-items:center; 
+  align-items: center;
 }
 
-.lists-container{
-  display:flex;
+.lists-container {
+  display: flex;
   flex-direction: column;
   width: 30rem;
   max-width: 50%;
-  line-height:1.5;
-  
+  line-height: 1.5;
 }
