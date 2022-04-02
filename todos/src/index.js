@@ -2,6 +2,9 @@ import Modal from "./components/modal.js";
 import { addTodoToList, createList, changeActiveList, renderList } from "./components/lists.js";
 import Todo from "./components/Todo.js";
 import './sass/styles.scss'
+import './assets/fonts/Body-SudburyBook.ttf'
+import './assets/fonts/Heading-CasablancaAntique.ttf'
+import './assets/fonts/Subhead-UniversBlack.ttf'
 
 const lists = {};
 
