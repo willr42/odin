@@ -92,7 +92,7 @@ h2 {
   max-width: 90%;
 }
 
-#newTodo > ul > li {
+#newTodo {
   ul {
     li {
       margin-top: 1.2rem;
@@ -105,6 +105,7 @@ h2 {
       textarea {
         max-width: 90%;
         display: block;
+        min-height: 1.5rem
       }
     }
   }
@@ -112,6 +113,7 @@ h2 {
 
 /*#endregion*/
 
+/*#region Lists */
 #newList {
   display: flex;
   justify-content: center;
@@ -145,3 +147,16 @@ h2 {
   max-width: 50%;
   line-height: 1.5;
 }
+
+/*#endregion*/
+
+/*#region Todos*/
+#todo-area {
+  display: grid;
+}
+
+.newTodoButton {
+  max-width: 2rem;
+}
+
+/*#endregion*/
