@@ -5,6 +5,7 @@ import './sass/styles.scss'
 import './assets/fonts/Body-SudburyBook.ttf'
 import './assets/fonts/Heading-CasablancaAntique.ttf'
 import './assets/fonts/Subhead-UniversBlack.ttf'
+import './assets/images/orks.svg'
 
 const lists = {};
 
