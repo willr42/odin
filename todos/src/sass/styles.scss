@@ -51,11 +51,13 @@ ul {
 }
 
 .background-image {
-  background-image:url("./assets/images/orks.svg");
-  width: 100px;
-  height: 100px;
+  background-image: url("./assets/images/orks.svg");
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 981px;
   position: absolute;
-  border-color: black;
+  left: 10em;
+  top: 10em;
 }
 
 /*#endregion*/
@@ -109,10 +111,12 @@ h2 {
     li {
       margin-top: 1.2rem;
       margin-bottom: 1.2rem;
+
       label {
         display: block;
         margin-bottom: 1rem;
       }
+
       input,
       textarea {
         max-width: 90%;
@@ -131,11 +135,13 @@ h2 {
   justify-content: center;
   margin: 0.5rem 1rem;
   align-items: center;
+
   input {
     min-height: 2rem;
     max-height: 3.5rem;
     margin-right: 1rem;
   }
+
   button {
     max-height: 2rem;
   }
@@ -163,12 +169,14 @@ h2 {
 /*#endregion*/
 
 /*#region Todos*/
+
 #todo-area {
   display: grid;
-}
-
-.newTodoButton {
-  max-width: 2rem;
+  grid-template-columns: auto-fit minmax(100px, 25%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 /*#endregion*/
