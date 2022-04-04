@@ -14,7 +14,7 @@
     <div id="sidebar">
       <h2 id="sidebar-title">Keepa' organize</h2>
       <ul class="lists-container"></ul>
-      <form id="newList" class="addList-container" action="post">
+      <form id="newList" class="addList-container" action="post" autocomplete="off">
         <input type="text" name="list_name" id="list_name" placeholder="New bukkit" />
         <button id="add-list" type="submit">&#8593</button>
       </form>
@@ -22,7 +22,7 @@
     <div id="modal" class="modal">
       <div id="modal-content">
         <h2>New jobbie?</h2>
-        <form id="newTodo" action="post">
+        <form id="newTodo" action="post" autocomplete="off">
           <ul>
             <li>
               <label for="todo_title">What do</label>
@@ -43,7 +43,7 @@
       </div>
     </div>
     <div id="todo-area">
-      <button class="newTodoButton hidden">+</button>
+      <button class="newTodoButton hidden">New Jobbie</button>
     </div>
     <div class="background-image"></div>
     <template id="todo-template">

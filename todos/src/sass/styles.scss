@@ -53,11 +53,13 @@ ul {
 .background-image {
   background-image: url("./assets/images/orks.svg");
   background-repeat: no-repeat;
-  height: 800px;
-  width: 981px;
+  height: 70%;
+  width: 78%;
   position: absolute;
-  left: 10em;
-  top: 10em;
+  left: 30%;
+  top: 20%;
+  background-size: cover;
+  min-width: auto;
 }
 
 /*#endregion*/
@@ -148,8 +150,8 @@ h2 {
 }
 
 .activeList {
-  color: red;
-  background-color: purple;
+  border-radius: 500px;
+  background-color: red;
 }
 
 #sidebar {
@@ -161,9 +163,12 @@ h2 {
 .lists-container {
   display: flex;
   flex-direction: column;
-  width: 30rem;
-  max-width: 50%;
+  margin: 1em;
   line-height: 1.5;
+  min-width: 5rem;
+  li {
+    padding: 0.3rem 0.6rem;
+  }
 }
 
 /*#endregion*/
@@ -172,11 +177,21 @@ h2 {
 
 #todo-area {
   display: grid;
-  grid-template-columns: auto-fit minmax(100px, 25%);
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2em;
   margin-left: 1em;
   margin-right: 1em;
 }
+
+.newTodoButton {
+  max-width: 6em;
+  max-height: 3em;
+}
+
+.todo-container {
+  background-color: white;
+  border: 0.2em black solid;
+  padding: 1.1em;
+ }
 
 /*#endregion*/
