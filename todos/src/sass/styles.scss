@@ -55,11 +55,13 @@ ul {
   background-repeat: no-repeat;
   height: 70%;
   width: 78%;
-  position: absolute;
+  position: fixed;
   left: 30%;
   top: 20%;
   background-size: cover;
   min-width: auto;
+  z-index: -999;
+  overflow: hidden;
 }
 
 /*#endregion*/
@@ -149,11 +151,6 @@ h2 {
   }
 }
 
-.activeList {
-  border-radius: 500px;
-  background-color: red;
-}
-
 #sidebar {
   display: flex;
   flex-direction: column;
@@ -166,8 +163,16 @@ h2 {
   margin: 1em;
   line-height: 1.5;
   min-width: 5rem;
+  padding: 0;
   li {
     padding: 0.3rem 0.6rem;
+    margin-bottom: 1rem;
+    background-color: rgb(187, 187, 187);
+    border-radius: 500px;
+  }
+  .activeList {
+    border-radius: 500px;
+    background-color: red;
   }
 }
 
@@ -181,6 +186,7 @@ h2 {
   grid-column-gap: 2em;
   margin-left: 1em;
   margin-right: 1em;
+  max-width: 90%;
 }
 
 .newTodoButton {
@@ -192,6 +198,6 @@ h2 {
   background-color: white;
   border: 0.2em black solid;
   padding: 1.1em;
- }
+}
 
 /*#endregion*/
