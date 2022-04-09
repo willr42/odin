@@ -23,7 +23,6 @@ function createList(lists) {
   } else {
     if (addListContainer.classList.contains("openError")) {
       const existingErrorElement = document.querySelector("#newList > p")
-      console.log("removing error element:", existingErrorElement)
       addListContainer.removeChild(existingErrorElement)
       addListContainer.classList.remove("openError")
     }

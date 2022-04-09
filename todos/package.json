@@ -8,7 +8,7 @@
   "license": "ISC",
   "scripts": {
     "clean": "rm dist/bundle.js",
-    "build-dev": "npx sass ./src/styles.scss ./dist/styles.css --no-source-map && webpack --mode development",
+    "build-dev": "npx sass ./src/sass/styles.scss ./dist/styles.css --no-source-map && webpack --mode development",
     "build-prod": "webpack --mode production"
   },
   "devDependencies": {
