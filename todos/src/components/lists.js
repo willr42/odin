@@ -6,7 +6,6 @@ function addTodoToList(newTodo, lists) {
 }
 
 function createList(lists) {
-  // shift this validation logic into another function so we're not continually creating an error Element we then throw away?
   const listInput = document.getElementById("list_name")
   const addListContainer = document.querySelector(".addList-container")
   if (listInput.value === "" & !addListContainer.classList.contains("openError")) {
@@ -79,6 +78,7 @@ function renderTodosInList(activeList) {
 function attachTemplate(newTodo) {
   const todoArea = document.querySelector("#todo-area")
   const template = document.querySelector("#todo-template")
+
   const clone = template.content.cloneNode(true)
   const heading = clone.querySelector(".todo-heading")
   const body = clone.querySelector(".todo-content")
@@ -86,28 +86,11 @@ function attachTemplate(newTodo) {
   heading.textContent = newTodo.title;
   body.textContent = newTodo.description;
   date.setAttribute("datetime", newTodo.dueDate)
-  const parsedDueDate = calculateDueDate(newTodo.dueDate)
-  date.textContent = `${parsedDueDate.weekday} ${parsedDueDate.day} ${parsedDueDate.month} ${parsedDueDate.year}`
+  date.textContent = newTodo.getParsedDateString()
 
   const todoButton = document.querySelector(".newTodoButton")
   todoArea.insertBefore(clone, todoButton)
 }
 
-function calculateDueDate(dueDate) {
-  const tempDate = new Date(dueDate)
-  let options = { weekday: "long" }
-  const locale = navigator.language
-  const weekDay = new Intl.DateTimeFormat(locale, options).format(tempDate)
-
-  options = { month: "long" }
-  const month = new Intl.DateTimeFormat(locale,options).format(tempDate)
-
-  return {
-    weekday: weekDay,
-    day: tempDate.getDate(),
-    month: month,
-    year: tempDate.getFullYear()
-  }
-}
 
 export { addTodoToList, createList, changeActiveList, renderList }
