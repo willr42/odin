@@ -9,7 +9,7 @@ import './assets/images/orks.svg'
 
 const lists = {};
 
-// TODO Need conditional behaviour. If there isn't any lists from local storage (in a first run scenario) initialise defaultList, set it as active, render to DOM.
+// TODO Need conditional behaviour. If there isn't any lists from local storage (in a first run scenario), do nothing. 
 //If there are lists, show those in the sidebar with same render function as normal.
 Modal();
 
