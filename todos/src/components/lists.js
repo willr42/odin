@@ -69,7 +69,7 @@ function renderTodosInList(activeList) {
   for (const listItem of activeList) {
     if (!listItem) {
       console.log("List empty. Finishing early")
-      break
+      return
     }
     attachTemplate(listItem)
   }
@@ -93,4 +93,4 @@ function attachTemplate(newTodo) {
 }
 
 
-export { addTodoToList, createList, changeActiveList, renderList }
+export { addTodoToList, createList, changeActiveList, renderList, addNewListToDOM}

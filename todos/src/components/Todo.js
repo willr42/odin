@@ -1,9 +1,13 @@
 class Todo {
 
-	constructor(title, description, dueDate) {
+	constructor(title, description, dueDate, id="") {
 		//TODO handle absence of name and description 
+		if(id !== null && id !== undefined) {
+			this.id = id
+		} else {
 		const _ = new Date()
 		this.id = _.toISOString()
+		}
 		this.title = title;
 		this.description = description;
 		this.dueDate = dueDate;
