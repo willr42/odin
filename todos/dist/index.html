@@ -30,7 +30,7 @@
             </li>
             <li>
               <label for="todo_date">When need?</label>
-              <input type="date" name="duedate" id="todo_date" placeholder="28/09/40000" />
+              <input type="date" name="duedate" id="todo_date" placeholder="28/09/40000" required="required" />
             </li>
             <li>
               <label for="todo_description">More about do</label>
@@ -47,7 +47,7 @@
     </div>
     <div class="background-image"></div>
     <template id="todo-template">
-      <div class="todo-container">
+      <div class="todo-container" data-todo-id="">
         <h3 class="todo-heading"></h3>
         <p class="todo-content"></p>
         <time datetime="" class="todo-date"></time>

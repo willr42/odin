@@ -1,12 +1,15 @@
+import getRandomInt from "../utils/getRandomInt"
+
 class Todo {
 
-	constructor(title, description, dueDate, id="") {
+	constructor(title, description, dueDate, id) {
 		//TODO handle absence of name and description 
 		if(id !== null && id !== undefined) {
 			this.id = id
 		} else {
 		const _ = new Date()
-		this.id = _.toISOString()
+		const _encoded = btoa(_.toISOString()) + getRandomInt(1, 99999)
+		this.id = _encoded
 		}
 		this.title = title;
 		this.description = description;
