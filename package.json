@@ -16,5 +16,7 @@
     "url": "https://github.com/willr42/odin/issues"
   },
   "homepage": "https://github.com/willr42/odin#readme",
-  "devDependencies": {}
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
 }

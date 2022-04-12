@@ -198,6 +198,17 @@ h2 {
   background-color: white;
   border: 0.2em black solid;
   padding: 1.1em;
+  position:relative;
+}
+
+.todo-details {
+    position: absolute;
+    width: 300px;
+    border-color: black;
+    border-style: solid;
+    height: 200px;
+    left: 5rem;
+    background: white;
 }
 
 /*#endregion*/
