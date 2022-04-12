@@ -16,6 +16,7 @@ if(!lists){
 
 Modal();
 
+// Setup new Todo modal
 const form = document.getElementById("newTodo");
 
 form.addEventListener("submit", (e) => {
@@ -29,6 +30,7 @@ form.addEventListener("submit", (e) => {
   storageController.updateStorage(lists)
 });
 
+// Setup new list form
 const listForm = document.getElementById("newList")
 
 listForm.addEventListener("submit", (e) => {
@@ -37,6 +39,7 @@ listForm.addEventListener("submit", (e) => {
   storageController.updateStorage(lists)
 })
 
+// Setup list change buttons
 const listsContainer = document.querySelector(".lists-container")
 
 listsContainer.addEventListener("click", (e) => {
@@ -48,4 +51,5 @@ const todoArea = document.querySelector("#todo-area")
 
 todoArea.addEventListener("click", e => {
   console.log(e.target)
+  // click to show todo details. Click anywhere else to stop showing.
 })
