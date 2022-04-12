@@ -83,10 +83,13 @@ function attachTemplate(newTodo) {
   const heading = clone.querySelector(".todo-heading")
   const body = clone.querySelector(".todo-content")
   const date = clone.querySelector(".todo-date")
+  const idDiv = clone.querySelector(".todo-container")
+
   heading.textContent = newTodo.title;
   body.textContent = newTodo.description;
   date.setAttribute("datetime", newTodo.dueDate)
   date.textContent = newTodo.getParsedDateString()
+  idDiv.dataset.todoId = newTodo.id;
 
   const todoButton = document.querySelector(".newTodoButton")
   todoArea.insertBefore(clone, todoButton)
