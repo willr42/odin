@@ -14,8 +14,6 @@ if(!lists){
   lists = {}
 }
 
-// TODO Need conditional behaviour. If there isn't any lists from local storage (in a first run scenario), do nothing. 
-//If there are lists, show those in the sidebar with same render function as normal.
 Modal();
 
 const form = document.getElementById("newTodo");
@@ -44,4 +42,10 @@ const listsContainer = document.querySelector(".lists-container")
 listsContainer.addEventListener("click", (e) => {
   changeActiveList(e, lists)
 })
-//TODO: load from & save to localStorage whenever state changes. New List. New Todo. Todo deleted. List deleted.
+
+// Setup todo details
+const todoArea = document.querySelector("#todo-area")
+
+todoArea.addEventListener("click", e => {
+  console.log(e.target)
+})
