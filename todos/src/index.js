@@ -10,7 +10,7 @@ import StorageController from "./utils/localStorage.js";
 
 const storageController = new StorageController();
 let lists = storageController.loadStorage()
-if(!lists){
+if (!lists) {
   lists = {}
 }
 
@@ -46,10 +46,11 @@ listsContainer.addEventListener("click", (e) => {
   changeActiveList(e, lists)
 })
 
-// Setup todo details
+// Setup todo details listing
 const todoArea = document.querySelector("#todo-area")
 
 todoArea.addEventListener("click", e => {
-  console.log(e.target)
+  Todo.prototype.viewTodoDetails(e, lists)
+}
   // click to show todo details. Click anywhere else to stop showing.
-})
+)
