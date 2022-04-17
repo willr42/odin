@@ -34,7 +34,8 @@ class Todo {
     const detailContents = document.createElement("p");
     detailPopup.classList.add("todo-details");
     detailContents.textContent = todoToEdit.description;
-    detailPopup.appendChild(detailContents)
+    detailPopup.appendChild(detailContents);
+    elementToAttach.classList.add("detailVisible");
     elementToAttach.appendChild(detailPopup);
   }
 
@@ -44,6 +45,10 @@ class Todo {
     const eventTarget = e.target;
 
     if (eventTarget.classList.contains("todo-container")) {
+      if (eventTarget.classList.contains("detailVisible")) {
+        console.log("Detail already visible")
+        return;
+      }
       for (const todo in activeList) {
         if (Object.hasOwnProperty.call(activeList, todo)) {
           const todoObj = activeList[todo];
@@ -54,6 +59,11 @@ class Todo {
       }
       // event target may be child of the actual todo where the state lives
     } else if (eventTarget.parentElement.classList.contains("todo-container")) {
+      if(eventTarget.parentElement.classList.contains("detailVisible")){
+        console.log("Detail already visible")
+        return
+      }
+
       for (const todo in activeList) {
         if (Object.hasOwnProperty.call(activeList, todo)) {
           const todoObj = activeList[todo];
