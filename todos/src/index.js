@@ -50,7 +50,7 @@ listsContainer.addEventListener("click", (e) => {
 const todoArea = document.querySelector("#todo-area")
 
 todoArea.addEventListener("click", e => {
-  Todo.prototype.viewTodoDetails(e, lists)
+  Todo.viewTodoDetails(e, lists)
 }
   // click to show todo details. Click anywhere else to stop showing.
 )

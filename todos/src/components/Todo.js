@@ -29,7 +29,16 @@ class Todo {
       .toString()}`;
   }
 
-  viewTodoDetails(e, lists) {
+  static showDetails(todoToEdit, elementToAttach) {
+    const detailPopup = document.createElement("div");
+    const detailContents = document.createElement("p");
+    detailPopup.classList.add("todo-details");
+    detailContents.textContent = todoToEdit.description;
+    detailPopup.appendChild(detailContents)
+    elementToAttach.appendChild(detailPopup);
+  }
+
+  static viewTodoDetails(e, lists) {
     const activeListName = document.querySelector(".activeList");
     const activeList = lists[activeListName.textContent];
     const eventTarget = e.target;
@@ -37,9 +46,9 @@ class Todo {
     if (eventTarget.classList.contains("todo-container")) {
       for (const todo in activeList) {
         if (Object.hasOwnProperty.call(activeList, todo)) {
-          const element = activeList[todo];
-          if (element.id === eventTarget.dataset.todoId) {
-            editTodo(element);
+          const todoObj = activeList[todo];
+          if (todoObj.id === eventTarget.dataset.todoId) {
+            this.showDetails(todoObj, eventTarget);
           }
         }
       }
@@ -47,9 +56,9 @@ class Todo {
     } else if (eventTarget.parentElement.classList.contains("todo-container")) {
       for (const todo in activeList) {
         if (Object.hasOwnProperty.call(activeList, todo)) {
-          const element = activeList[todo];
-          if (element.id === eventTarget.parentElement.dataset.todoId) {
-            editTodo(element);
+          const todoObj = activeList[todo];
+          if (todoObj.id === eventTarget.parentElement.dataset.todoId) {
+            this.showDetails(todoObj, eventTarget.parentElement);
           }
         }
       }
