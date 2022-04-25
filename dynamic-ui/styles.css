@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  font-size:larger
+}
+
+body,
+body::before,
+body::after {
+  margin: 0;
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation * {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-list {
+  display: none;
+  padding: 0;
+  margin: 0;
+  min-width: 90px;
+}
+
+.dropdown-list > li {
+	padding: 0.1rem 0.1rem;
+	margin-bottom: 0.33rem;
+}
+
+.dropdown:hover .dropdown-list {
+  display: block;
+}
