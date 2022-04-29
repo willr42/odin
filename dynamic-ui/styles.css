@@ -61,7 +61,7 @@ nav {
 }
 
 .nav-link:hover {
-	text-decoration: solid;
+	text-decoration: underline black;
 }
 
 /* Dropdown Styles */
