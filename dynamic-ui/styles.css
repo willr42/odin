@@ -38,6 +38,10 @@ input, button, textarea, select {
 
 /* Styles */
 
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 ul {
   list-style: none;
   padding: 0;
