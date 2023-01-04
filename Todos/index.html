@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Need Doin?</title>
+  </head>
+  <body>
+    <main>
+      <h1>Somethin' need doin'?</h1>
+      <div id="layout-grid">
+        <div id="sidebar">
+          <h2 id="sidebar-title">Keepa' organize</h2>
+          <div class="list-container"></div>
+          <button id="add-list">New bukkit</button>
+        </div>
+        <div id="todo-area">
+          <button class="newTodoButton">+</button>
+        </div>
+      </div>
+    </main>
+    <div id="modal" class="modal">
+      <div id="modal-content">
+        <h2>New jobbie?</h2>
+        <form id="newTodo" action="post">
+          <ul>
+            <li>
+              <label for="todo_title">What do</label>
+              <input
+                type="text"
+                name="title"
+                id="todo_title"
+                placeholder="Kill da' humie"
+                required="required"
+              />
+            </li>
+            <li>
+              <label for="todo_date">When need?</label>
+              <input
+                type="date"
+                name="duedate"
+                id="todo_date"
+                placeholder="28/09/40000"
+              />
+            </li>
+            <li>
+              <label for="todo_description">More about do</label>
+              <textarea
+                name="description"
+                id="todo_description"
+                cols="30"
+                rows="10"
+                placeholder="Go down planet. Get dakka. Shoot dem. Job dun"
+              ></textarea>
+            </li>
+          </ul>
+          <button type="submit">Add it</button>
+        </form>
+      </div>
+    </div>
+    <template id="todo-template">
+      <div class="todo-container">
+        <h3 class="todo-heading"></h3>
+        <p class="todo-content"></p>
+        <input type="checkbox" name="taskStatus" id="1" />
+      </div>
+    </template>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
