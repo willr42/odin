@@ -8,17 +8,20 @@ function removeControls(slider) {
   );
 }
 
+/**
+ * Performs initial setup of the images in the slider by assigning each an offset.
+ * @param {int} imageWidth
+ * @param {Element} slider
+ */
 function offsetImages(imageWidth, slider) {
-  let sliderChildren = Array.from(slider.children);
+  let sliderChildren = removeControls(slider);
 
-  for (let i = 1; i < sliderChildren.length; i++) {
+  for (let i = 0; i < sliderChildren.length; i++) {
     const currentElement = sliderChildren[i];
-    if (currentElement.classList.contains('image-holder')) {
-      const newOffset = (imageWidth * i).toString() + 'px';
+    const newOffset = (imageWidth * i).toString() + 'px';
       currentElement.style.left = newOffset;
     }
   }
-}
 
 offsetImages(600, slider);
 
