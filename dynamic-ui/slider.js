@@ -1,12 +1,24 @@
 // Spread images across slider
-function offsetImages(imageWidth) {
-  let images = Array.from(document.querySelectorAll('.image-holder'));
+let slider = document.querySelector('.slider-frame');
 
-  for (let i = 1; i < images.length; i++) {
-    const currentImage = images[i];
-    const newOffset = (imageWidth * i).toString() + 'px';
-    currentImage.style.left = newOffset;
+function offsetImages(imageWidth, slider) {
+  let sliderChildren = Array.from(slider.children);
+
+  for (let i = 1; i < sliderChildren.length; i++) {
+    const currentElement = sliderChildren[i];
+    if (currentElement.classList.contains('image-holder')) {
+      const newOffset = (imageWidth * i).toString() + 'px';
+      currentElement.style.left = newOffset;
+    }
   }
 }
 
-offsetImages(600);
+offsetImages(600, slider);
+
+slider.addEventListener('click', (event) => {
+  let leftButton = document.querySelector('.left-button');
+  let rightButton = document.querySelector('.right-button');
+  if (event.target == rightButton) {
+    console.log('Right button clicked');
+  }
+});
