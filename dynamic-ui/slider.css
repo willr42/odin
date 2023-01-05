@@ -1,0 +1,39 @@
+body {
+  margin: 10px;
+}
+
+.slider-frame {
+  position: relative;
+  overflow: hidden;
+  width: 600px;
+  height: 450px;
+}
+
+.image-holder {
+  position: absolute;
+  width: 600px;
+  height: 450px;
+}
+
+.slider-controls {
+  z-index: 5;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 1rem;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 30pt;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

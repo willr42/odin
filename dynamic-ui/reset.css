@@ -48,20 +48,3 @@ textarea,
 select {
   font: inherit;
 }
-
-body {
-  margin: 10px;
-}
-
-.image-frame {
-  position: relative;
-  overflow: hidden;
-  width: 600px;
-  height: 450px;
-}
-
-.image-holder {
-  position: absolute;
-  width: 600px;
-  height: 450px;
-}
