@@ -1,6 +1,13 @@
 // Spread images across slider
 let slider = document.querySelector('.slider-frame');
 
+// Removes the slider controls from the div to make it easier to work with.
+function removeControls(slider) {
+  return Array.from(slider.children).filter((element) =>
+    element.classList.contains('image-holder')
+  );
+}
+
 function offsetImages(imageWidth, slider) {
   let sliderChildren = Array.from(slider.children);
 
