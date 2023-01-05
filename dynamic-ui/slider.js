@@ -19,9 +19,9 @@ function offsetImages(imageWidth, slider) {
   for (let i = 0; i < sliderChildren.length; i++) {
     const currentElement = sliderChildren[i];
     const newOffset = (imageWidth * i).toString() + 'px';
-      currentElement.style.left = newOffset;
-    }
+    currentElement.style.left = newOffset;
   }
+}
 
 /**
  * Attached to the slider overall, performs a slide.
@@ -39,7 +39,36 @@ function clickHandler(event) {
 }
 
 /**
+ * Checks we have enough space, and if so, sets an offset for the images inside the slider moving each to the right.
+ */
+function handleRight(sliderChildren) {
+  let lastElement = sliderChildren[sliderChildren.length - 1];
+  // if we're all the way on the right, we need to do nothing
+  if (lastElement.style.left === '0px') {
+    return;
   }
+  for (let i = 0; i < sliderChildren.length; i++) {
+    const element = sliderChildren[i];
+    element.style.left =
+      (parseInt(element.style.left) - element.offsetWidth).toString() + 'px';
+  }
+}
+
+/**
+ * Checks we have enough space, and if so, sets an offset for the images inside the slider moving each to the left.
+ */
+function handleLeft(sliderChildren) {
+  let firstElement = sliderChildren[0];
+  // if we're all the way on the left, we need to do nothing
+  if (firstElement.style.left === '0px') {
+    return;
+  }
+  for (let i = 0; i < sliderChildren.length; i++) {
+    const element = sliderChildren[i];
+    element.style.left =
+      (parseInt(element.style.left) + element.offsetWidth).toString() + 'px';
+  }
+}
 
 offsetImages(600, slider);
 
