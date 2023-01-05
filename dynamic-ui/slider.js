@@ -23,12 +23,24 @@ function offsetImages(imageWidth, slider) {
     }
   }
 
-offsetImages(600, slider);
-
-slider.addEventListener('click', (event) => {
+/**
+ * Attached to the slider overall, performs a slide.
+ */
+function clickHandler(event) {
   let leftButton = document.querySelector('.left-button');
   let rightButton = document.querySelector('.right-button');
+  let sliderChildren = removeControls(event.currentTarget);
+
   if (event.target == rightButton) {
-    console.log('Right button clicked');
+    handleRight(sliderChildren);
+  } else if (event.target == leftButton) {
+    handleLeft(sliderChildren);
   }
-});
+}
+
+/**
+  }
+
+offsetImages(600, slider);
+
+slider.addEventListener('click', clickHandler);
