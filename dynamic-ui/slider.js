@@ -8,6 +8,10 @@ function removeControls(slider) {
   );
 }
 
+function setupSlider(imageWidth, slider) {
+  offsetImages(imageWidth, slider);
+}
+
 /**
  * Performs initial setup of the images in the slider by assigning each an offset.
  * @param {int} imageWidth
@@ -70,6 +74,6 @@ function handleLeft(sliderChildren) {
   }
 }
 
-offsetImages(600, slider);
+setupSlider(600, slider);
 
 slider.addEventListener('click', clickHandler);
