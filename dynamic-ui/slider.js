@@ -9,17 +9,17 @@ function removeControls(slider) {
 }
 
 function setupSlider(imageWidth, slider) {
-  offsetImages(imageWidth, slider);
+  let sliderChildren = removeControls(slider);
+  offsetImages(imageWidth, sliderChildren);
+  setupJumpButtons(sliderChildren);
 }
 
 /**
  * Performs initial setup of the images in the slider by assigning each an offset.
  * @param {int} imageWidth
- * @param {Element} slider
+ * @param {Element} sliderChildren
  */
-function offsetImages(imageWidth, slider) {
-  let sliderChildren = removeControls(slider);
-
+function offsetImages(imageWidth, sliderChildren) {
   for (let i = 0; i < sliderChildren.length; i++) {
     const currentElement = sliderChildren[i];
     const newOffset = (imageWidth * i).toString() + 'px';
@@ -55,6 +55,10 @@ function handleRight(sliderChildren) {
     const element = sliderChildren[i];
     element.style.left =
       (parseInt(element.style.left) - element.offsetWidth).toString() + 'px';
+    console.log(
+      'New left setting is: ',
+      (parseInt(element.style.left) - element.offsetWidth).toString() + 'px'
+    );
   }
 }
 
@@ -71,6 +75,39 @@ function handleLeft(sliderChildren) {
     const element = sliderChildren[i];
     element.style.left =
       (parseInt(element.style.left) + element.offsetWidth).toString() + 'px';
+  }
+}
+
+function jump(sliderChildren, target) {
+  while (target.style.left !== '0px') {
+    if (parseInt(target.style.left) > 0) {
+      handleRight(sliderChildren);
+    } else {
+      handleLeft(sliderChildren);
+    }
+  }
+}
+
+function setupJumpButtons(sliderChildren) {
+  let jumpButtons = Array.from(
+    document.querySelector('.jump-controls').children
+  );
+  jumpButtons.forEach((button, index, jumpButtons) => {
+    button.addEventListener('click', () => {
+      // if we're not already active
+      if (!button.classList.contains('active')) {
+        removeActive(jumpButtons);
+        jump(sliderChildren, sliderChildren[index]);
+        button.classList.add('active');
+      }
+    });
+  });
+}
+
+function removeActive(elements) {
+  for (let index = 0; index < elements.length; index++) {
+    const element = elements[index];
+    element.classList.remove('active');
   }
 }
 

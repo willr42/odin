@@ -38,3 +38,7 @@ button {
   cursor: pointer;
   text-align: center;
 }
+
+.slider-jump.active {
+  background-color: black;
+}
